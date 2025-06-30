@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.box {
+  border: 1px solid black;
+  background-color: #eee;
+  padding: 20px;
+  margin: 10px;
+  float: left;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f77;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+  .box {
+    width: 31.33%;
+    margin: 1%;
+  }
+}
+
+/* Tablet: 2 on top, 1 below */
+@media (min-width: 768px) and (max-width: 991px) {
+  .box {
+    width: 48%;
+    margin: 1%;
+  }
+
+  .box:nth-child(3) {
+    width: 98%;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+  .box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
